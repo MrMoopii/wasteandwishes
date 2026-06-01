@@ -1,0 +1,130 @@
+/* public/css/style.css */
+
+/* Warna Tema Utama Waste & Wishes (Dibuat murni untuk warna saja) */
+.bg-waste {
+    background-color: #17AFB0 !important;
+}
+
+.text-waste {
+    color: #17AFB0 !important;
+}
+
+.btn-waste {
+    background-color: #17AFB0 !important;
+    color: white !important;
+}
+
+.btn-waste:hover {
+    background-color: #118586 !important;
+    color: white !important;
+}
+
+/* ==========================================
+   2. CUSTOM HEADER (NAVBAR) LEBIH MEGAH
+   ========================================== */
+.navbar {
+    padding-top: 1.25rem !important;
+    /* Ketebalan navbar atas */
+    padding-bottom: 1.25rem !important;
+    /* Ketebalan navbar bawah */
+}
+
+.navbar-brand {
+    font-size: 1.95rem !important;
+    /* Ukuran logo/brand diperbesar */
+    font-weight: 800 !important;
+    /* Extra Bold */
+    letter-spacing: 0.5px;
+}
+
+/* Memperbesar dan Mempertebal Tulisan Menu di Navbar */
+.navbar-nav .nav-link {
+    font-size: 1.25rem !important;
+    /* Ukuran tulisan menu dinaikkan */
+    font-weight: 600 !important;
+    /* Teks menu lebih tebal dan jelas */
+    padding-left: 1.5rem !important;
+    /* Jarak antar menu dibuat lebih lega */
+    padding-right: 1.5rem !important;
+    color: #a0a0a0 !important;
+    /* Warna abu-abu elegan untuk menu biasa */
+}
+
+.nav-link.active {
+    font-weight: 700 !important;
+    color: #17AFB0 !important;
+    /* Hijau toska untuk menu aktif */
+}
+
+/* Solusi Khusus: Menyamakan dan Memperbesar Tombol Masuk & Daftar di Navbar */
+.navbar .btn {
+    font-size: 1.1rem !important;
+    /* Ukuran teks tombol disamakan */
+    padding: 0.5rem 1.5rem !important;
+    /* Ukuran kotak/padding disamakan */
+    font-weight: 600 !important;
+    /* Teks tombol lebih tegas */
+    border-radius: 0.5rem !important;
+    /* Sudut melengkung halus yang modern */
+    transition: all 0.2s ease;
+}
+
+/* ==========================================
+   3. CUSTOM HERO SECTION LEBIH MEGAH
+   ========================================== */
+.hero-section {
+    padding-top: 6rem !important;
+    /* Memberi ruang vertikal yang sangat luas */
+    padding-bottom: 6rem !important;
+    min-height: 75vh;
+    /* Memaksa area hero mengambil 75% tinggi layar browser */
+}
+
+.hero-title {
+    font-size: 3.75rem !important;
+    /* Judul utama super besar dan mencolok */
+    font-weight: 800 !important;
+    /* Ketebalan maksimal (Extra Bold) */
+    line-height: 1.2;
+}
+
+.hero-desc {
+    font-size: 1.25rem !important;
+    /* Ukuran paragraf deskripsi dinaikkan agar nyaman dibaca */
+    line-height: 1.6;
+}
+
+/* ==========================================
+   4. EFEK INTERAKTIF LAYANAN UTAMA
+   ========================================== */
+.card-layanan {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Kartu akan sedikit naik dan bayangannya menebal saat kursor mendekat */
+.card-layanan:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Memastikan border kolom statistik responsif di mobile */
+@media (max-width: 768px) {
+
+    .border-start,
+    .border-end {
+        border: none !important;
+    }
+}
+
+/* ==========================================
+   5. STYLING FOOTER INTERAKTIF
+   ========================================== */
+.hover-waste {
+    transition: color 0.2s ease-in-out;
+}
+
+.hover-waste:hover {
+    color: #17AFB0 !important;
+    /* Berubah jadi toska khas Waste & Wishes saat di-hover */
+    text-shadow: 0 0 5px rgba(23, 175, 176, 0.3);
+}
