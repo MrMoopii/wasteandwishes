@@ -22,5 +22,34 @@ class Flasher
             unset($_SESSION['flash']);
         }
     }
+    
+    public static function flash_event()
+    {
+        if( isset($_SESSION['flash']) ) {
+            
+            $pesan = $_SESSION['flash']['pesan'];
+            $aksi = $_SESSION['flash']['aksi'];
+            $tipe = $_SESSION['flash']['tipe']; // success, error, warning, info
 
+            // Panggil Library SweetAlert2 via CDN & Jalankan Scriptnya
+            echo "
+            <script src='https://cdn.jsdelivr.net/npm/sweetalert2@11'></script>
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    Swal.fire({
+                        title: 'Yeay!',
+                        text: 'Kamu {$pesan} {$aksi}!',
+                        icon: '{$tipe}',
+                        confirmButtonText: 'Lanjut',
+                        confirmButtonColor: '#17AFB0', // Warna hijau tema Waste & Wishes lu
+                        backdrop: `rgba(0,0,0,0.4)`
+                    });
+                });
+            </script>
+            ";
+            
+            // Hapus session setelah ditampilkan
+            unset($_SESSION['flash']);
+        }
+    }    
 }
