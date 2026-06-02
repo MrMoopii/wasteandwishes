@@ -20,7 +20,7 @@ class LanggananController extends Controller
 
         $this->view('templates/header', $data);
         if (!$data['langganan']) {
-            $this->view('langganan/form_daftar', $data);
+            $this->view('langganan/form_langganan', $data);
         } else {
             $this->view('langganan/status_aktif', $data); // Menggunakan file status_aktif.php milikmu
         }
