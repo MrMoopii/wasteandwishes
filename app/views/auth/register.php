@@ -10,12 +10,15 @@
                 <div class="mx-auto bg-waste" style="width: 50px; height: 4px; border-radius: 10px;"></div>
             </div>
 
+            <!-- Flasher Pesan -->
             <div class="my-3">
                 <?php Flasher::flash(); ?>
             </div>
 
+            <!-- Form Daftar Akun -->
             <form action="<?= BASEURL; ?>/auth/prosesRegister" method="POST">
 
+                <!-- Field Username -->
                 <div class="mb-3">
                     <label for="username" class="form-label fw-semibold text-secondary">Username</label>
                     <div class="input-group">
@@ -25,6 +28,7 @@
                     </div>
                 </div>
 
+                <!-- Field Email -->
                 <div class="mb-3">
                     <label for="email" class="form-label fw-semibold text-secondary">Email</label>
                     <div class="input-group">
@@ -34,19 +38,38 @@
                     </div>
                 </div>
 
-                <div class="mb-4">
+                <!-- Field Password -->
+                <div class="mb-3">
                     <label for="password" class="form-label fw-semibold text-secondary">Password</label>
                     <div class="input-group">
                         <span class="input-group-text bg-light border-end-0 text-muted">🔒</span>
-                        <input type="password" class="form-control bg-light border-start-0 ps-0 py-2 fs-6" id="password"
-                            name="password" placeholder="Buat password yang kuat" required>
+                        <input type="password" class="form-control bg-light border-start-0 border-end-0 ps-0 py-2 fs-6"
+                            id="password" name="password" placeholder="Buat password yang kuat" required>
+                        <button class="btn btn-light border border-start-0 text-muted btn-toggle-password" type="button"
+                            data-target="password">👁️</button>
+                    </div>
+                </div>      
+
+                <!-- Field Konfirmasi Password -->
+                <div class="mb-4">
+                    <label for="confirm_password" class="form-label fw-semibold text-secondary">Konfirmasi
+                        Password</label>
+                    <div class="input-group">
+                        <span class="input-group-text bg-light border-end-0 text-muted">🔒</span>
+                        <input type="password" class="form-control bg-light border-start-0 border-end-0 ps-0 py-2 fs-6"
+                            id="confirm_password" name="confirm_password" placeholder="Ulangi password di atas"
+                            required>
+                        <button class="btn btn-light border border-start-0 text-muted btn-toggle-password" type="button"
+                            data-target="confirm_password">👁️</button>
                     </div>
                 </div>
 
+                <!-- Tombol Daftar Akun -->
                 <button type="submit" class="btn btn-waste btn-lg w-100 fw-bold py-2 shadow-sm mb-3">
                     Daftar Sekarang
                 </button>
 
+                <!-- Navigasi ke Login -->
                 <div class="text-center">
                     <p class="text-muted small mb-0">
                         Sudah memiliki akun?
