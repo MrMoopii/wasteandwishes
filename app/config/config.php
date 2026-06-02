@@ -6,7 +6,7 @@ if ($_SERVER['SERVER_NAME'] == 'localhost' || $_SERVER['SERVER_ADDR'] == '127.0.
     define('BASEURL', 'http://localhost/wasteandwishes/public');
 } else {
     // Gantilah sesuai dengan nama domain unik yang kamu dapatkan dari Render nanti
-    define('BASEURL', 'https://wasteandwishes.onrender.com/');
+    define('BASEURL', 'https://wasteandwishes.onrender.com/public');
 }
 // Database
 define('DB_HOST', getenv('DB_HOST')); // Host Database
