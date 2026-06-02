@@ -31,7 +31,7 @@ class AuthController extends Controller
         $password = $_POST['password'];
 
         // Mencari akun berdasarkan username di database
-        $akun = $this->model('Akun_model')->getAkunByUsernamme($username);
+        $akun = $this->model('Akun_model')->getAkunByUsername($username);
 
         // Menjalankan logika proses Login jika username terdaftar
         if ($akun) {
@@ -46,12 +46,12 @@ class AuthController extends Controller
                 exit();
             } else {
                 Flasher::setFlash('Password yang dimasukkan', 'salah!', 'danger');
-                header('Location ' . BASEURL . '/auth');
+                header('Location: ' . BASEURL . '/auth');
                 exit();
             }
         } else {
             Flasher::setFlash('Username', 'tidak ditemukan!', 'danger');
-            header('Location ' . BASEURL . '/auth');
+            header('Location: ' . BASEURL . '/auth');
             exit();
         }
     }
@@ -63,10 +63,19 @@ class AuthController extends Controller
         $dataInput = [
             'username' => filter_input(INPUT_POST, 'username', FILTER_SANITIZE_SPECIAL_CHARS),
             'email' => filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL),
-            'password' => $_POST['password']
+            'password' => $_POST['password'],
+            'confirm_password' => $_POST['confirm_password']
         ];
 
-        // Cek validasi: Apakah username ini sudah pernah dipakai orang lain?
+        // Mengecek apakah Password dan Konfirmasi Password cocok
+        if ($dataInput['password'] !== $dataInput['confirm_password']) {
+            // Jika tidak cocok, pasang flasher error dan hentikan proses
+            Flasher::setFlash('Konfirmasi password', 'tidak cocok!', 'danger');
+            header('Location: ' . BASEURL . '/auth/register');
+            exit;
+        }
+
+        // Mengecek validasi: Apakah username ini sudah pernah dipakai orang lain?
         $cekUsername = $this->model('Akun_model')->getAkunByUsername($dataInput['username']);
         if ($cekUsername) {
             Flasher::setFlash('Username', 'sudah digunakan orang lain!', 'danger');

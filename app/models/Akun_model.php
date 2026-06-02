@@ -12,7 +12,7 @@ class Akun_model
     }
 
     // Mencari akun berdasarkan username
-    public function getAkunByUsernamme($username)
+    public function getAkunByUsername($username)
     {
         // Siapkan query menggunakan prepared statement
         $this->db->query('SELECT * FROM ' . $this->tabel . ' WHERE username = :username');
@@ -29,8 +29,7 @@ class Akun_model
         $password_hashed = password_hash($data['password'], PASSWORD_DEFAULT);
 
         // Menyiapkan query untuk insert ke database
-        $query = 'INSERT INTO ' . $this->tabel . ' (username, email, password, peran) 
-        VALUES (:username, :email, :password, :peran';
+        $query = 'INSERT INTO ' . $this->tabel . ' (username, email, password, peran) VALUES (:username, :email, :password, :peran)';
 
         $this->db->query($query);
 
@@ -44,7 +43,7 @@ class Akun_model
         $this->db->execute();
 
         // Menghitung baris yang berhasil ditambahkan jika berhasil akan mengembalikan nilai 1 jika tidak 0
-        $this->db->rowCount();
+        return $this->db->rowCount();
 
     }
 }
