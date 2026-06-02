@@ -9,7 +9,7 @@ class LanggananController extends Controller
             exit;
         }
 
-        $data['judul'] = 'Status Berlangganan Sampah';
+        $data['judul'] = 'Langganan';
         $id_akun = $_SESSION['id_akun'];
         $data['langganan'] = $this->model('Langganan_model')->getLanggananByAkun($id_akun);
 
@@ -33,7 +33,11 @@ class LanggananController extends Controller
         $id_akun = $_SESSION['id_akun'];
 
         if ($this->model('Langganan_model')->tambahDataLangganan($_POST, $id_akun) > 0) {
-            // PERBAIKAN: Jangan langsung ke sukses, tapi arahkan ke halaman pembayaran!
+            
+            // Update session secara real-time menjadi Aktif
+            $_SESSION['status_langganan'] = 'Aktif';
+
+            // Arahkan ke halaman pembayaran
             header('Location: ' . BASEURL . '/langganan/pembayaran');
             exit;
         } else {
@@ -69,7 +73,7 @@ class LanggananController extends Controller
         $id_akun = $_SESSION['id_akun'];
 
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            // Update status dari 'Belum Bayar' menjadi 'Aktif' di database
+            // Update status dari 'Nonaktif' menjadi 'Aktif' di database
             $this->model('Langganan_model')->aktifkanLangganan($id_akun);
 
             // Setelah sukses diaktifkan, baru boleh dilempar ke rute sukses untuk cetak nota

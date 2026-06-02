@@ -42,6 +42,12 @@ class AuthController extends Controller
                 $_SESSION['username'] = $akun['username'];
                 $_SESSION['peran'] = $akun['peran'];
 
+                // Mengambil status langgana berdasarkan id_akun
+                $status = $this->model('Langganan_model')->getLanggananByAkun($akun['id_akun']);
+
+                // Jika data langganan ditemukan, masukkan statusnya ke session. Jika tidak, set Nonaktif
+                $_SESSION['status_langganan'] = ($status) ? $status['status_langganan'] : 'Nonaktif';
+
                 // Mengalihkan user ke halaman utama
                 header('Location: ' . BASEURL);
                 exit();

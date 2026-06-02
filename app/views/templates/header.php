@@ -8,7 +8,6 @@
     <title><?= $data['judul'] ?> - Waste & Wishes</title>
     
     <link rel="icon" type="image/png" href="<?= BASEURL; ?>/img/Favicon/wasteandwishes_logo.png">
-    
     <link rel="stylesheet" href="<?= BASEURL; ?>/css/bootstrap.css">
     <link rel="stylesheet" href="<?= BASEURL; ?>/css/style.css">
 </head>
@@ -47,8 +46,8 @@
 
                         <?php if ($_SESSION['peran'] == 'user'): ?>
                             <li class="nav-item">
-                                <a class="nav-link <?= ($data['judul'] == 'Berlangganan Sampah') ? 'active' : ''; ?>"
-                                    href="<?= BASEURL; ?>/langganan">Berlangganan Sampah</a>
+                                <a class="nav-link <?= ($data['judul'] == 'Langganan') ? 'active' : ''; ?>"
+                                    href="<?= BASEURL; ?>/langganan">Langganan</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link <?= ($data['judul'] == 'Daftar Event') ? 'active' : ''; ?>"

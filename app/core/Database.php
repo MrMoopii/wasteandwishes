@@ -16,7 +16,7 @@ class Database
         // Data Source Name
         $dsn = 'mysql:host=' . $this->host . ';dbname=' . $this->db_name;
         $option = [
-            PDO::ATTR_PERSISTENT => true,
+            PDO::ATTR_PERSISTENT => false,
             PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
         ];
 
@@ -65,18 +65,32 @@ class Database
     public function resultSet()
     {
         $this->execute();
-        return $this->stmt->fetchAll(PDO::FETCH_ASSOC);
+        $result = $this->stmt->fetchAll(PDO::FETCH_ASSOC);
+        $this->stmt->closeCursor(); // Mengosongkan statement buffer agar resource lebih ringan
+        return $result;
     }
 
     // Fungsi untuk mengambil satu data saja (me-return satu baris)
     public function single()
     {
         $this->execute();
-        return $this->stmt->fetch(PDO::FETCH_ASSOC);
+        $result = $this->stmt->fetch(PDO::FETCH_ASSOC);
+        $this->stmt->closeCursor(); // Mengosongkan statement buffer agar resource lebih ringan
+        return $result;
     }
 
     public function rowCount()
     {
         return $this->stmt->rowCount();
+    }
+
+    public function __destruct()
+    {
+        if ($this->stmt) {
+            $this->stmt = null; // Hancurkan object statement terlebih dahulu
+        }
+        if ($this->dbh) {
+            $this->dbh = null;  // Menutup koneksi PDO secara resmi dengan mengubahnya menjadi null
+        }
     }
 }

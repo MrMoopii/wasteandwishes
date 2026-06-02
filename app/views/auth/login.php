@@ -29,7 +29,6 @@
                 </div>
 
                 <!-- Field Password -->
-                <!-- Field Password -->
                 <div class="mb-3">
                     <label for="password" class="form-label fw-semibold text-secondary">Password</label>
                     <div class="input-group">
