@@ -13,10 +13,16 @@
 
     <body>
 
+        <!-- Logo dan Nama -->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
             <div class="container">
-                <a class="navbar-brand fw-bold" href="<?= BASEURL; ?>">
-                    Waste <span class="text-waste">&</span> Wishes
+                <a class="navbar-brand d-flex align-items-center gap-3 text-decoration-none" href="<?= BASEURL; ?>">
+                    <img src="<?= BASEURL; ?>/img/wasteandwishes_logo.png" alt="Waste & Wishes Logo"
+                        style="height: 35px; width: auto;" class="d-inline-block">
+
+                    <span class="fs-4 fw-bold text-white mb-0" style="letter-spacing: 0.3px;">
+                        Waste <span class="text-waste">&</span> Wishes
+                    </span>
                 </a>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -67,10 +73,10 @@
                             <span class="navbar-text me-3 text-light">
                                 Halo, <strong>
                                     <?= $_SESSION['username']; ?>
-                                    </strong>
-                                    <span class="badge bg-waste text-dark ms-1">
-                                        <?= ucfirst($_SESSION['peran']); ?>
-                                    </span>
+                                </strong>
+                                <span class="badge bg-waste text-dark ms-1">
+                                    <?= ucfirst($_SESSION['peran']); ?>
+                                </span>
                             </span>
                             <a class="btn btn-outline-danger" href="<?= BASEURL; ?>/auth/logout">Keluar</a>
                         <?php endif; ?>
