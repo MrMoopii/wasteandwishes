@@ -1,0 +1,7 @@
+RewriteEngine On
+
+# Mengalihkan halaman utama langsung ke folder public
+RewriteRule ^$ public/ [L]
+
+# Mengalihkan semua request URL lainnya ke folder public
+RewriteRule (.*) public/$1 [L]

@@ -15,7 +15,7 @@ class Akun_model
     public function getAkunByUsername($username)
     {
         // Siapkan query menggunakan prepared statement
-        $this->db->query('SELECT * FROM ' . $this->tabel . ' WHERE username = :username');
+        $this->db->query('SELECT * FROM ' . $this->tabel . ' WHERE BINARY username = :username');
         // Ikat nilainya ke parameter
         $this->db->bind('username', $username);
         // Mengembalikan 1 baris data dengan username unik
