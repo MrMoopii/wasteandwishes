@@ -7,7 +7,6 @@
     <title><?= $data['judul'] ?> - Waste & Wishes</title>
     <link rel="stylesheet" href="<?= BASEURL; ?>/css/bootstrap.css">
     <link rel="stylesheet" href="<?= BASEURL; ?>/css/style.css">
-    <link rel="stylesheet" href="<?= BASEURL; ?>/css/event/style.css">
 </head>
 
 <body>
