@@ -25,8 +25,8 @@
             </div>
             
             <div class="mt-4">
-                <h4 class="fw-bold">Syarat dan Ketentuan</h4>
-                <div class="info-box shadow-sm" style="font-size: 1.1rem; line-height: 1.6;">
+                <h4 class="fw-bold">Tanggal Pelaksanaan</h4>
+                <div class="info-box-tgl" style="font-size: 2.5rem; line-height: bold;">
                     <?= $data['event']['tanggal']; ?>
                 </div>
             </div>

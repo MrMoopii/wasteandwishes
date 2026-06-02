@@ -33,6 +33,36 @@ class EventController extends Controller {
                 'nama' => 'Volunteer SAMI EduGarden Action',
                 'harga' => 'Gratis',
                 'gambar' => '5.jpg'
+            ],
+            [
+                'id' => 6,
+                'nama' => 'EVENT NGEWE BARENG MAGGOT',
+                'harga' => 'Gratis',
+                'gambar' => '5.jpg'
+            ],
+            [
+                'id' => 7,
+                'nama' => 'NGOCOK AMAN BARENG MGT',
+                'harga' => 'Gratis',
+                'gambar' => '5.jpg'
+            ],
+            [
+                'id' => 8,
+                'nama' => 'NGOCOK AMAN BARENG MGT',
+                'harga' => 'Gratis',
+                'gambar' => '5.jpg'
+            ],
+            [
+                'id' => 9,
+                'nama' => 'NGOCOK AMAN BARENG MGT',
+                'harga' => 'Gratis',
+                'gambar' => '5.jpg'
+            ],
+            [
+                'id' => 10,
+                'nama' => 'NGOCOK AMAN BARENG MGT',
+                'harga' => 'Gratis',
+                'gambar' => '5.jpg'
             ]
         ];
         $this->view('templates/header', $data);
@@ -51,7 +81,7 @@ class EventController extends Controller {
                 'nama' => 'Seminar Memulai Ke Dunia Startup',
                 'harga' => 'Gratis',
                 'deskripsi' => 'Pelajari langkah awal membangun startup berwawasan lingkungan. Kita akan membedah model bisnis pengelolaan limbah dan budidaya maggot BSF dari nol.',
-                'tanggal' => 'Rabu, 11 Maret 2026',
+                'tanggal' => '📅 Rabu, 11 Maret 2026',
                 'gambar' => '1.jpg'
             ],
             2 => [
@@ -59,7 +89,7 @@ class EventController extends Controller {
                 'nama' => 'Internship Farmtastis Journey',
                 'harga' => 'Gratis',
                 'deskripsi' => 'Program magang eksklusif untuk merasakan langsung operasional peternakan dan pengelolaan sampah organik terpadu.',
-                'tanggal' => 'Senin, 06 April 2026 - Rabu, 06 Mei 2026',
+                'tanggal' => '📅 Senin, 06 April 2026 - Rabu, 06 Mei 2026',
                 'gambar' => '2.jpg'
             ],
             3 => [
@@ -67,7 +97,7 @@ class EventController extends Controller {
                 'nama' => 'Laboratorium Ajaib Maggot',
                 'harga' => 'Gratis',
                 'deskripsi' => 'Jelajahi dunia mikroskopis dan siklus hidup Black Soldier Fly (BSF). Peserta akan diajak melihat langsung proses biokonversi sampah organik menjadi pupuk dan pakan ternak berkualitas tinggi di fasilitas laboratorium kami.',
-                'tanggal' => 'Sabtu, 18 April 2026',
+                'tanggal' => '📅 Sabtu, 18 April 2026',
                 'gambar' => '3.jpg'
             ],
             4 => [
@@ -75,7 +105,7 @@ class EventController extends Controller {
                 'nama' => 'Edukasi Pengelolaan Limbah Organik Dengan Inovasi Maggot',
                 'harga' => 'Gratis',
                 'deskripsi' => 'Pelatihan intensif tentang cara efektif mengolah sampah dapur dan limbah rumah tangga menggunakan metode maggot. Sangat cocok untuk pegiat lingkungan, ibu rumah tangga, dan pemula yang ingin memulai dari pekarangan sendiri.',
-                'tanggal' => 'Minggu, 10 Mei 2026',
+                'tanggal' => '📅 Minggu, 10 Mei 2026',
                 'gambar' => '4.jpg'
             ],
             5 => [
@@ -83,7 +113,47 @@ class EventController extends Controller {
                 'nama' => 'Volunteer SAMI EduGarden Action',
                 'harga' => 'Gratis',
                 'deskripsi' => 'Bergabunglah sebagai relawan untuk aksi nyata menghijaukan lingkungan! Kita akan melakukan penanaman bibit, pembuatan kompos komunal, dan edukasi kebersihan langsung ke masyarakat sekitar.',
-                'tanggal' => 'Sabtu, 23 Mei 2026',
+                'tanggal' => '📅 Sabtu, 23 Mei 2026',
+                'gambar' => '5.jpg'
+            ],
+            6 => [
+                'id' => 6,
+                'nama' => 'EVENT NGEWE BARENG MAGGOT',
+                'harga' => 'Gratis',
+                'deskripsi' => 'Bergabunglah sebagai relawan untuk aksi nyata menghijaukan lingkungan! Kita akan melakukan penanaman bibit, pembuatan kompos komunal, dan edukasi kebersihan langsung ke masyarakat sekitar.',
+                'tanggal' => '📅 Sabtu, 27 Mei 2026',
+                'gambar' => '5.jpg'
+            ],
+            7 => [
+                'id' => 7,
+                'nama' => 'NGOCOK AMAN BARENG MGT',
+                'harga' => 'Gratis',
+                'deskripsi' => 'Bergabunglah sebagai relawan untuk aksi nyata menghijaukan lingkungan! Kita akan melakukan penanaman bibit, pembuatan kompos komunal, dan edukasi kebersihan langsung ke masyarakat sekitar.',
+                'tanggal' => '📅 Sabtu, 29 Mei 2026',
+                'gambar' => '5.jpg'
+            ],
+            8 => [
+                'id' => 8,
+                'nama' => 'NGOCOK AMAN BARENG MGT',
+                'harga' => 'Gratis',
+                'deskripsi' => 'Bergabunglah sebagai relawan untuk aksi nyata menghijaukan lingkungan! Kita akan melakukan penanaman bibit, pembuatan kompos komunal, dan edukasi kebersihan langsung ke masyarakat sekitar.',
+                'tanggal' => '📅 Sabtu, 29 Mei 2026',
+                'gambar' => '5.jpg'
+            ],
+            9 => [
+                'id' => 9,
+                'nama' => 'NGOCOK AMAN BARENG MGT',
+                'harga' => 'Gratis',
+                'deskripsi' => 'Bergabunglah sebagai relawan untuk aksi nyata menghijaukan lingkungan! Kita akan melakukan penanaman bibit, pembuatan kompos komunal, dan edukasi kebersihan langsung ke masyarakat sekitar.',
+                'tanggal' => '📅 Sabtu, 29 Mei 2026',
+                'gambar' => '5.jpg'
+            ],
+            10 => [
+                'id' => 10,
+                'nama' => 'NGOCOK AMAN BARENG MGT',
+                'harga' => 'Gratis',
+                'deskripsi' => 'Bergabunglah sebagai relawan untuk aksi nyata menghijaukan lingkungan! Kita akan melakukan penanaman bibit, pembuatan kompos komunal, dan edukasi kebersihan langsung ke masyarakat sekitar.',
+                'tanggal' => '📅 Sabtu, 29 Mei 2026',
                 'gambar' => '5.jpg'
             ]
         ];
@@ -128,6 +198,31 @@ class EventController extends Controller {
             5 => [
                 'id' => 5,
                 'nama' => 'Pelatihan Kompos Rumah Tangga',
+                'gambar' => '5.jpg' 
+            ],
+            6 => [
+                'id' => 6,
+                'nama' => 'Pelatihan Ngewe',
+                'gambar' => '5.jpg' 
+            ],
+            7 => [
+                'id' => 7,
+                'nama' => 'Pelatihan Ngocok',
+                'gambar' => '5.jpg' 
+            ],
+            8 => [
+                'id' => 8,
+                'nama' => 'Pelatihan Ngocok',
+                'gambar' => '5.jpg' 
+            ],
+            9 => [
+                'id' => 9,
+                'nama' => 'Pelatihan Ngocok',
+                'gambar' => '5.jpg' 
+            ],
+            10 => [
+                'id' => 10,
+                'nama' => 'Pelatihan Ngocok',
                 'gambar' => '5.jpg' 
             ]
         ];
