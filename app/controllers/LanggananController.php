@@ -1,8 +1,7 @@
 <?php
 
-<<<<<<< HEAD
-class LanggananController extends Controller {
-    
+class LanggananController extends Controller
+{
     public function index()
     {
         // KUNCI KEAMANAN: Cek apakah user sudah login
@@ -15,22 +14,9 @@ class LanggananController extends Controller {
 
         // JIKA SUDAH LOGIN, jalankan kode di bawah ini untuk memuat halaman langganan
         $data['judul'] = 'Berlangganan - Waste & Wishes';
-        
+
         $this->view('templates/header', $data);
         $this->view('langganan/index', $data);
-        $this->view('templates/footer');
-    }
-
-    
-=======
-class LanggananController extends Controller
-{
-    public function index()
-    {
-        $data['judul'] = "Berlangganan Sampah";
-
-        $this->view('templates/header', $data);
-        $this->view('langganan/index');
         $this->view('templates/footer');
     }
 
@@ -42,5 +28,4 @@ class LanggananController extends Controller
         $this->view('langganan/jadwalpengambilan', $data);
         $this->view('templates/footer');
     }
->>>>>>> main
 }
