@@ -11,7 +11,7 @@
             </p>
 
             <div class="d-grid d-md-flex justify-content-md-start gap-3">
-                <a href="<?= BASEURL; ?>/auth" class="btn btn-waste btn-lg px-4 fw-bold shadow-sm">
+                <a href="<?= BASEURL; ?>/langganan" class="btn btn-waste btn-lg px-4 fw-bold shadow-sm">
                     Mulai Berlangganan
                 </a>
                 <a href="#layanan" class="btn btn-outline-secondary btn-lg px-4">
