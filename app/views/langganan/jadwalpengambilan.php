@@ -1,145 +1,77 @@
-<style>
-    .jadwal-view {
-        padding: 40px 20px;
-        min-height: 60vh;
-        background: #f5fbff;
-    }
-
-    .jadwal-card {
-        max-width: 760px;
-        margin: 0 auto;
-        border-radius: 28px;
-        border: 1px solid rgba(13, 110, 253, 0.12);
-        background: #ffffff;
-        box-shadow: 0 26px 70px rgba(13, 110, 253, 0.08);
-        overflow: hidden;
-    }
-
-    .jadwal-header {
-        background: #f0f8ff;
-        padding: 28px 32px;
-        text-align: center;
-    }
-
-    .jadwal-header h2 {
-        margin: 0;
-        font-size: 2rem;
-        font-weight: 800;
-        color: #0d6efd;
-    }
-
-    .jadwal-header p {
-        margin: 10px auto 0;
-        max-width: 520px;
-        color: #556174;
-        font-size: 1rem;
-    }
-
-    .jadwal-body {
-        padding: 28px 32px 32px;
-    }
-
-    .jadwal-grid {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 14px;
-    }
-
-    .jadwal-option {
-        display: flex;
-        align-items: center;
-        gap: 0.85rem;
-        padding: 16px 18px;
-        border-radius: 18px;
-        background: #f8fbff;
-        border: 1px solid #dbe9f7;
-        transition: transform 0.18s ease, background-color 0.18s ease;
-        cursor: pointer;
-    }
-
-    .jadwal-option:hover {
-        transform: translateY(-2px);
-        background: #ecf4ff;
-    }
-
-    .jadwal-option input {
-        width: 1.2rem;
-        height: 1.2rem;
-    }
-
-    .jadwal-option label {
-        margin: 0;
-        font-size: 1rem;
-        font-weight: 600;
-        color: #1f2937;
-    }
-
-    .jadwal-actions {
-        margin-top: 28px;
-        text-align: center;
-    }
-
-    .jadwal-actions .btn {
-        min-width: 180px;
-        padding: 12px 24px;
-        font-weight: 600;
-        border-radius: 12px;
-    }
-
-    @media (max-width: 768px) {
-        .jadwal-grid {
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-        }
-    }
-
-    @media (max-width: 520px) {
-        .jadwal-grid {
-            grid-template-columns: 1fr;
-        }
-    }
-</style>
-
-<div class="jadwal-view">
-    <div class="jadwal-card">
-        <div class="jadwal-header">
-            <h2>Jadwal Pengambilan Rutin</h2>
-            <p>Pilih hari pengambilan sampah yang ingin dijadwalkan secara berulang setiap minggu.</p>
+<div class="container py-5" style="min-height: 60vh;">
+    <div class="card shadow-sm mx-auto" style="max-width: 760px; border-radius: 20px; border: none; overflow: hidden; border-top: 4px solid #17AFB0 !important;">
+        
+        <div class="p-4 p-md-5 text-center" style="background-color: rgba(23, 175, 176, 0.05);">
+            <h2 class="fw-bold mb-3" style="color: #17AFB0;">Jadwal Pengambilan Rutin</h2>
+            <p class="text-secondary mb-0 mx-auto" style="max-width: 500px; font-size: 15px;">
+                Pilih hari pengambilan sampah yang ingin dijadwalkan secara berulang setiap minggu.
+            </p>
         </div>
-        <div class="jadwal-body">
-            <div class="jadwal-grid">
-                <div class="jadwal-option">
-                    <input type="checkbox" id="jadwal-senin" name="jadwal[]" value="Senin">
-                    <label for="jadwal-senin">Senin</label>
-                </div>
-                <div class="jadwal-option">
-                    <input type="checkbox" id="jadwal-selasa" name="jadwal[]" value="Selasa">
-                    <label for="jadwal-selasa">Selasa</label>
-                </div>
-                <div class="jadwal-option">
-                    <input type="checkbox" id="jadwal-rabu" name="jadwal[]" value="Rabu">
-                    <label for="jadwal-rabu">Rabu</label>
-                </div>
-                <div class="jadwal-option">
-                    <input type="checkbox" id="jadwal-kamis" name="jadwal[]" value="Kamis">
-                    <label for="jadwal-kamis">Kamis</label>
-                </div>
-                <div class="jadwal-option">
-                    <input type="checkbox" id="jadwal-jumat" name="jadwal[]" value="Jumat">
-                    <label for="jadwal-jumat">Jumat</label>
-                </div>
-                <div class="jadwal-option">
-                    <input type="checkbox" id="jadwal-sabtu" name="jadwal[]" value="Sabtu">
-                    <label for="jadwal-sabtu">Sabtu</label>
-                </div>
-                <div class="jadwal-option">
-                    <input type="checkbox" id="jadwal-minggu" name="jadwal[]" value="Minggu">
-                    <label for="jadwal-minggu">Minggu</label>
-                </div>
-            </div>
 
-            <div class="jadwal-actions">
-                <button type="button" class="btn btn-primary">Simpan Jadwal</button>
-            </div>
+        <div class="p-4 p-md-5 bg-white">
+            <form action="<?= BASEURL; ?>/jadwal/simpan" method="POST">
+                
+                <div class="row g-3 mb-5">
+                    
+                    <div class="col-12 col-sm-6 col-md-4">
+                        <label class="d-flex align-items-center p-3 w-100 bg-light" style="border: 1px solid #e9ecef; border-radius: 12px; cursor: pointer;">
+                            <input type="checkbox" name="jadwal[]" value="Senin" class="me-3" style="width: 18px; height: 18px; cursor: pointer;">
+                            <span class="text-dark fw-semibold" style="font-size: 15px;">Senin</span>
+                        </label>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-md-4">
+                        <label class="d-flex align-items-center p-3 w-100 bg-light" style="border: 1px solid #e9ecef; border-radius: 12px; cursor: pointer;">
+                            <input type="checkbox" name="jadwal[]" value="Selasa" class="me-3" style="width: 18px; height: 18px; cursor: pointer;">
+                            <span class="text-dark fw-semibold" style="font-size: 15px;">Selasa</span>
+                        </label>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-md-4">
+                        <label class="d-flex align-items-center p-3 w-100 bg-light" style="border: 1px solid #e9ecef; border-radius: 12px; cursor: pointer;">
+                            <input type="checkbox" name="jadwal[]" value="Rabu" class="me-3" style="width: 18px; height: 18px; cursor: pointer;">
+                            <span class="text-dark fw-semibold" style="font-size: 15px;">Rabu</span>
+                        </label>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-md-4">
+                        <label class="d-flex align-items-center p-3 w-100 bg-light" style="border: 1px solid #e9ecef; border-radius: 12px; cursor: pointer;">
+                            <input type="checkbox" name="jadwal[]" value="Kamis" class="me-3" style="width: 18px; height: 18px; cursor: pointer;">
+                            <span class="text-dark fw-semibold" style="font-size: 15px;">Kamis</span>
+                        </label>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-md-4">
+                        <label class="d-flex align-items-center p-3 w-100 bg-light" style="border: 1px solid #e9ecef; border-radius: 12px; cursor: pointer;">
+                            <input type="checkbox" name="jadwal[]" value="Jumat" class="me-3" style="width: 18px; height: 18px; cursor: pointer;">
+                            <span class="text-dark fw-semibold" style="font-size: 15px;">Jumat</span>
+                        </label>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-md-4">
+                        <label class="d-flex align-items-center p-3 w-100 bg-light" style="border: 1px solid #e9ecef; border-radius: 12px; cursor: pointer;">
+                            <input type="checkbox" name="jadwal[]" value="Sabtu" class="me-3" style="width: 18px; height: 18px; cursor: pointer;">
+                            <span class="text-dark fw-semibold" style="font-size: 15px;">Sabtu</span>
+                        </label>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-md-4">
+                        <label class="d-flex align-items-center p-3 w-100 bg-light" style="border: 1px solid #e9ecef; border-radius: 12px; cursor: pointer;">
+                            <input type="checkbox" name="jadwal[]" value="Minggu" class="me-3" style="width: 18px; height: 18px; cursor: pointer;">
+                            <span class="text-dark fw-semibold" style="font-size: 15px;">Minggu</span>
+                        </label>
+                    </div>
+
+                </div>
+
+                <div class="text-center">
+                    <button type="submit" class="btn fw-bold px-4 py-3 shadow-sm" style="background-color: #17AFB0; color: white; border-radius: 10px; font-size: 16px; min-width: 200px;">
+                        Simpan Jadwal
+                    </button>
+                </div>
+
+            </form>
         </div>
+        
     </div>
 </div>
