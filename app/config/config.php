@@ -6,10 +6,10 @@ if ($_SERVER['SERVER_NAME'] == 'localhost' || $_SERVER['SERVER_ADDR'] == '127.0.
     define('BASEURL', 'http://localhost/wasteandwishes/public');
 } else {
     // Gantilah sesuai dengan nama domain unik yang kamu dapatkan dari Render nanti
-    define('BASEURL', 'https://waste-and-wishes.onrender.com');
+    define('BASEURL', 'https://wasteandwishes.onrender.com/');
 }
 // Database
-define('DB_HOST', 'sql12.freesqldatabase.com'); // Host Database
-define('DB_USER', 'sql12828996'); // Username Database
-define('DB_PASS', 'EPMfYsTLsw'); // Password Database
-define('DB_NAME', 'sql12828996'); // Nama Database
+define('DB_HOST', getenv('DB_HOST')); // Host Database
+define('DB_USER', getenv('DB_USER')); // Username Database
+define('DB_PASS', getenv('DB_PASS')); // Password Database
+define('DB_NAME', getenv('DB_NAME')); // Nama Database
