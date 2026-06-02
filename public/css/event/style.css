@@ -1,0 +1,74 @@
+/* =========================================
+   CSS KHUSUS HALAMAN EVENT - WASTE & WISHES
+   ========================================= */
+:root {
+    --primary-event: #17AFB0;
+    --light-bg-event: #E6F7F7;
+    --gray-placeholder: #E0E0E0;
+    --text-dark: #333;
+    --border-radius: 8px;
+}
+
+/* Scoop styling ke dalam .event-page-custom agar tidak merusak Bootstrap */
+.event-page-custom {
+    color: var(--text-dark);
+}
+
+/* Layout Halaman Daftar Event */
+.event-page-custom .event-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.event-page-custom .card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+/* Layout Halaman Detail & Checkout (Kiri-Kanan) */
+.event-page-custom .split-layout {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.event-page-custom .left-col,
+.event-page-custom .right-col {
+    flex: 1;
+}
+
+/* Kotak Info (Deskripsi & Syarat Ketentuan) */
+.event-page-custom .info-box {
+    background-color: var(--light-bg-event);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    margin-top: 10px;
+    min-height: 150px;
+}
+
+/* Kotak Form Checkout */
+.event-page-custom .form-card {
+    background: #fff;
+    border-radius: var(--border-radius);
+    border: 1px solid #ddd;
+}
+
+/* Responsif buat HP dan Tablet */
+@media (max-width: 992px) {
+    .event-page-custom .event-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .event-page-custom .split-layout {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 576px) {
+    .event-page-custom .event-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
