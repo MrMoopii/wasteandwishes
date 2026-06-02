@@ -38,6 +38,7 @@ class AuthController extends Controller
             // Cek apakah password benar
             if (password_verify($password, $akun['password'])) {
                 $_SESSION['login'] = true;
+                $_SESSION['id_akun'] = $akun['id_akun'];
                 $_SESSION['username'] = $akun['username'];
                 $_SESSION['peran'] = $akun['peran'];
 
