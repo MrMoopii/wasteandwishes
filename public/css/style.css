@@ -180,10 +180,12 @@
     margin-top: 10px;
     min-height: 150px;
 }
+
 .event-page-custom .info-box-tgl {
-    
+
     padding: 20px;
 }
+
 /* Kotak Form Checkout */
 .event-page-custom .form-card {
     background: #fff;
@@ -206,4 +208,99 @@
     .event-page-custom .event-grid {
         grid-template-columns: repeat(1, 1fr);
     }
+}
+
+/* Styling form_langganan Modern - Waste & Wishes Theme */
+body {
+    overflow-x: hidden;
+    background-color: #f8fafc;
+}
+
+.langganan-section {
+    position: relative;
+    z-index: 1;
+}
+
+/* Dekorasi Blob Belakang Card */
+.bg-blob {
+    position: absolute;
+    right: -10%;
+    bottom: -10%;
+    width: 350px;
+    height: 350px;
+    background-color: #e2f9f9;
+    /* Toska soft */
+    border-radius: 43% 57% 41% 59% / 37% 42% 58% 63%;
+    z-index: -1;
+    opacity: 0.7;
+    filter: blur(10px);
+    pointer-events: none;
+}
+
+/* Card Form Container */
+.card-form {
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.04) !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-form:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Kustomisasi Input Group & Icon */
+.card-form .input-group-text {
+    border-color: #e2e8f0;
+    color: #64748b !important;
+    font-size: 16px;
+}
+
+.card-form .form-control {
+    border-color: #e2e8f0;
+    color: #1e293b;
+    font-size: 14px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    transition: all 0.2s ease-in-out;
+}
+
+.card-form .form-control::placeholder {
+    color: #94a3b8;
+    font-size: 13px;
+}
+
+/* Efek Glow Hijau Toska Saat Input Aktif (Focus) */
+.card-form .form-control:focus {
+    background-color: #ffffff !important;
+    border-color: #10b981 !important;
+    /* Emerald/Teal Theme */
+    box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.15) !important;
+    color: #0f172a;
+}
+
+/* Menyelaraskan border icon saat input di-focus */
+.card-form .input-group:focus-within .input-group-text {
+    border-color: #10b981 !important;
+    background-color: #ffffff !important;
+    color: #10b981 !important;
+}
+
+/* Tombol Desain Gradasi Hijau Toska Khas Aplikasi */
+.btn-teal {
+    background: linear-gradient(135deg, #0ea5e9 0%, #0d9488 100%);
+    border: none;
+    font-size: 15px;
+    letter-spacing: 0.3px;
+    transition: all 0.3s ease;
+}
+
+.btn-teal:hover {
+    background: linear-gradient(135deg, #0284c7 0%, #0f766e 100%);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(13, 148, 136, 0.3);
+}
+
+.btn-teal:active {
+    transform: translateY(1px);
 }
