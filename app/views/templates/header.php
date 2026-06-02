@@ -18,7 +18,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center gap-3 text-decoration-none" href="<?= BASEURL; ?>">
-                <img src="<?= BASEURL; ?>/img/wasteandwishes_logo.png" alt="Waste & Wishes Logo"
+                <img src="<?= BASEURL; ?>/img/Favicon/wasteandwishes_logo.png" alt="Waste & Wishes Logo"
                     style="height: 35px; width: auto;" class="d-inline-block">
 
                 <span class="fs-4 fw-bold text-white mb-0" style="letter-spacing: 0.3px;">
