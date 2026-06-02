@@ -7,7 +7,7 @@
     
     <title><?= $data['judul'] ?> - Waste & Wishes</title>
     
-    <link rel="icon" type="image/png" href="<?= BASEURL; ?>/img/wasteandwishes_logo.png">
+    <link rel="icon" type="image/png" href="<?= BASEURL; ?>/img/Favicon/wasteandwishes_logo.png">
     
     <link rel="stylesheet" href="<?= BASEURL; ?>/css/bootstrap.css">
     <link rel="stylesheet" href="<?= BASEURL; ?>/css/style.css">
